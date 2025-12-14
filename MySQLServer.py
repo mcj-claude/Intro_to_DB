@@ -32,7 +32,7 @@ def create_database():
             cursor.close()
             connection.close()
             
-    except Error as e:
+    except mysql.connector.Error as e:
         print(f"Error while connecting to MySQL: {e}")
     except Exception as e:
         print(f"An error occurred: {e}")
